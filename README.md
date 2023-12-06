@@ -43,11 +43,11 @@ scikit.learno==1.2.2
 
 scipy==1.10.1
 
-
+pycaret==0.5.0
 
 # Storytelling
 
-foram utilizados os dados Categóricos de **Escolaridade** e o **Valor de transaçoes** e **Quantidade de transações** para estruturar a exploração e vizualiação dos dados. Neste caso, avaliando os gráficos e levando em consideraçção apenas a inadimplência, pode-se perceber que:
+Foram utilizados  todos os dados Categóricos para estruturar a exploração e vizualiação dos dados. Neste caso, avaliando os gráficos e levando em consideraçção apenas a inadimplência, pode-se perceber que:
 - Pessoas com Mestrado apresentam um maior número de inadimplêcia;
 - Pessoas com Doutorado tem o menor número de inadimplentes
 - Pessoas com o salário abaixo de 40K por ano apresentam um maior número de inadimplência;
@@ -62,10 +62,14 @@ Em contrapartida a maioria de Adimplentes:
 - Tem Mestrado;
 - Ganham até 40K por ano;
 
-Dito isto, a maioria dos clientes possui Mestrado, o que pode explicar do porquê eles estarem no topo tanto de inadimplência como Adimplência assim como maioria dos clientes ganham até 40K por ano, que também explicaria porquê estão no topo tanto da adimplência como iadimplência também.
+Dito isto, além da exploração dos dadoos continuamos utilizando as técnicas de Machine Learning, mais espeficicamente as ferramentas do statsmodel. Ao utilizar essas ferramentas tinha-se como base o R2, que num primeiro momento apenas alterando as variáveis utilizadas chegou a um R2 pouco satisfatório de pouco mais que 35%. Em seguida continuou-se usando técnicas de estatísticas e de Machine Learning para aumentar a acurácia do modelo foram retirados outliers, escolhidas as melhores variáveis, feito um PCA para melhor escolha de variáveis, além de um passo muito importante que foi a de bivariada discreta em que se agrupou algumas variáveis renomeando-as. Após a escolha das melhores variáveis através das técnicas descritas chegou-se as cinco que dariam mais importância, para sua escolha foi utilizado o coeficiente Kappa através do uso do Pycaret.
+
+Por fim as variáveis de maior importância, depois da tunagem do próprio modelo foram tempo_emprego, idade e renda. Porém as cinco melhores para o modelo também são: qtd_filhos, idade, tempo_emprego, qt_pessoas_residencia e renda
+
+Por fim o modelo está tunado e pronto para uso utilizando a base de dados descrita acima, e pode ser de grande ajuda para futuros estudos com bases diferentes e talvez reais onde se queira aplicar o Credict-score.
+
+Colocarei um video do Streamlit recebendo a base de dados e dela extraindo o modelo em formato pkl junto aos arquivos.
 
 ## Autores
 
-Eduardo Fontineli 
-
- [@EduardoFonteneli](https://www.linkedin.com/in/carlos-eduardo-fontineli-goncalves/)
+[@EduardoFonteneli](https://www.linkedin.com/in/carlos-eduardo-fontineli-goncalves/)
